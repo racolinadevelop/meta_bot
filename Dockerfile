@@ -1,24 +1,20 @@
 # Image size ~ 400MB
-FROM node:21-alpine3.18 as builder
+FROM node:21-bullseye-slim AS builder
 
 WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
 ENV PNPM_HOME=/usr/local/bin
 
+COPY package*.json *-lock.yaml ./
+RUN pnpm install
+
 COPY . .
 
-COPY package*.json *-lock.yaml ./
+RUN pnpm run build
 
-RUN apk add --no-cache --virtual .gyp \
-        python3 \
-        make \
-        g++ \
-    && apk add --no-cache git \
-    && pnpm install && pnpm run build \
-    && apk del .gyp
 
-FROM node:21-alpine3.18 as deploy
+FROM node:21-bullseye-slim AS deploy
 
 WORKDIR /app
 
@@ -28,13 +24,12 @@ EXPOSE $PORT
 
 COPY --from=builder /app/assets ./assets
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/*.json /app/*-lock.yaml ./
+COPY --from=builder /app/*-lock.yaml ./
+COPY --from=builder /app/package*.json ./
 
-RUN corepack enable && corepack prepare pnpm@latest --activate 
+RUN corepack enable && corepack prepare pnpm@latest --activate
 ENV PNPM_HOME=/usr/local/bin
 
-RUN npm cache clean --force && pnpm install --production --ignore-scripts \
-    && addgroup -g 1001 -S nodejs && adduser -S -u 1001 nodejs \
-    && rm -rf $PNPM_HOME/.npm $PNPM_HOME/.node-gyp
+RUN pnpm install --production --ignore-scripts
 
 CMD ["npm", "start"]
