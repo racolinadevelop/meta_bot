@@ -4,6 +4,7 @@ import path from "path";
 import fs from "fs";
 import { menuFlow } from "./menuFlow";
 import { faqFlow } from "./faqFlow";
+import "dotenv/config";
 
 const Prompt_DETECTED = path.join(
     process.cwd(),

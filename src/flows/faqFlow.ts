@@ -3,6 +3,7 @@ import path from "path";
 import fs, { stat } from "fs";
 import chatGPT from "~/services/chatGPT";
 import spreadSheets from "~/services/spreadSheets";
+import "dotenv/config";
 
 const pathPrompt = path.join(
     process.cwd(),

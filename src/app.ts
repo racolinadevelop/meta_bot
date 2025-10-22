@@ -1,8 +1,9 @@
-import { join } from 'path'
-import { createBot, createProvider, createFlow, addKeyword, utils } from '@builderbot/bot'
-import { MemoryDB as Database } from '@builderbot/bot'
-import { MetaProvider as Provider } from '@builderbot/provider-meta'
-import flows from './flows'
+import { join } from 'path';
+import { createBot, createProvider, createFlow, addKeyword, utils } from '@builderbot/bot';
+import { MemoryDB as Database } from '@builderbot/bot';
+import { MetaProvider as Provider } from '@builderbot/provider-meta';
+import flows from './flows';
+import "dotenv/config";
 
 const PORT = process.env.PORT ?? 3008
 
