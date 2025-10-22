@@ -7,7 +7,7 @@ import "dotenv/config";
 
 const pathPrompt = path.join(
     process.cwd(),
-    "assets/prompts",
+    "assets/Prompts",
     "prompt_ChatGPT.txt"
 );
 const prompt = fs.readFileSync(pathPrompt, "utf-8");

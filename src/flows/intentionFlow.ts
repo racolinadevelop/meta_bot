@@ -8,7 +8,7 @@ import "dotenv/config";
 
 const Prompt_DETECTED = path.join(
     process.cwd(),
-    "assets/prompts",
+    "assets/Prompts",
     "prompt_detection.txt"
 );
 
