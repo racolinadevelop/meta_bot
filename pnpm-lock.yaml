@@ -12,11 +12,11 @@ importers:
         specifier: 1.0.0-alpha.0
         version: 1.0.0-alpha.0(@apache-arrow/ts@14.0.2)(apache-arrow@14.0.2)(axios@1.12.2)(googleapis@164.1.0)(ignore@5.3.2)(lodash@4.17.21)(openai@6.6.0(zod@4.1.12))
       '@builderbot/bot':
-        specifier: 1.3.2-y.0
-        version: 1.3.2-y.0
+        specifier: 1.3.4
+        version: 1.3.4
       '@builderbot/provider-meta':
-        specifier: 1.3.2-y.0
-        version: 1.3.2-y.0
+        specifier: 1.3.4
+        version: 1.3.4
       '@ffmpeg-installer/ffmpeg':
         specifier: ^1.1.0
         version: 1.1.0
@@ -131,14 +131,11 @@ packages:
   '@builderbot-plugins/langchain@1.0.0-alpha.0':
     resolution: {integrity: sha512-dkTteJj4idQEWpndwA0PX/whf47U58GzTeKPK1V4nH67qwfiDONtfk8IEgMF0SYjoaU4i7+T0VFTaLp06syl7Q==}
 
-  '@builderbot/bot@1.2.2':
-    resolution: {integrity: sha512-wIkcccE51Xx4pSBvwezvOJSsvJY2seytAxpCurjzrIXapplgRvg0yE7rn2Qq1DsniBzXCrKJ9ILv1ZbEmBPrgQ==}
+  '@builderbot/bot@1.3.4':
+    resolution: {integrity: sha512-25VqdXgjsE+3kdhptw4N/RT/zVFp3w0uvDM5a45uJ3ln56gijHmEhIzlUu0dMYvLJ4f5fTZsW6EKGma3QNxjAA==}
 
-  '@builderbot/bot@1.3.2-y.0':
-    resolution: {integrity: sha512-oC4/1/ojYNj47OwnMIVu+Scq6u5R05nrwMqmFTaRAfqXhqG0F9FXbzwSi7lpP0aqu30jHmdbefC6kGD5tFVz1g==}
-
-  '@builderbot/provider-meta@1.3.2-y.0':
-    resolution: {integrity: sha512-FWaFNtbOCyz11ID0bhuSY8h3pwpQV8YS2CJpzueVtGu1icuAsYCYxnph5uV206p/e6j5rZAxPOAIhF86FJd8Iw==}
+  '@builderbot/provider-meta@1.3.4':
+    resolution: {integrity: sha512-VfbY0u8bvaVRyFcNkMZc7ezHQ5FGufBgaCOoFNu43awCDeYuagJR+TBRvgi52mvMXcB+2N2lfDiuFPMK+F0Qog==}
 
   '@cfworker/json-schema@4.1.1':
     resolution: {integrity: sha512-gAmrUZSGtKc3AiBL71iNWxDsyUC5uMaKKGdvzYsBoTW/xi42JQHl7eKV2OYzCUqvc+D2RCcf7EXY2iCyFIk6og==}
@@ -2987,7 +2984,7 @@ snapshots:
   '@builderbot-plugins/langchain@1.0.0-alpha.0(@apache-arrow/ts@14.0.2)(apache-arrow@14.0.2)(axios@1.12.2)(googleapis@164.1.0)(ignore@5.3.2)(lodash@4.17.21)(openai@6.6.0(zod@4.1.12))':
     dependencies:
       '@builderbot-plugins/fast-embedding': 1.0.0-alpha.0
-      '@builderbot/bot': 1.2.2
+      '@builderbot/bot': 1.3.4
       '@lancedb/vectordb-linux-x64-gnu': 0.4.20
       '@langchain/community': 0.0.43(googleapis@164.1.0)(lodash@4.17.21)(openai@6.6.0(zod@4.1.12))(vectordb@0.4.20(@apache-arrow/ts@14.0.2)(apache-arrow@14.0.2))
       '@langchain/core': 0.1.63(openai@6.6.0(zod@4.1.12))
@@ -3125,7 +3122,7 @@ snapshots:
       - youtube-transcript
       - youtubei.js
 
-  '@builderbot/bot@1.2.2':
+  '@builderbot/bot@1.3.4':
     dependencies:
       '@ffmpeg-installer/ffmpeg': 1.1.0
       body-parser: 1.20.3
@@ -3141,23 +3138,7 @@ snapshots:
       - debug
       - supports-color
 
-  '@builderbot/bot@1.3.2-y.0':
-    dependencies:
-      '@ffmpeg-installer/ffmpeg': 1.1.0
-      body-parser: 1.20.3
-      cors: 2.8.5
-      fluent-ffmpeg: 2.1.3
-      follow-redirects: 1.15.11
-      mime-types: 2.1.35
-      picocolors: 1.1.1
-      polka: 0.5.2
-    optionalDependencies:
-      sharp: 0.33.3
-    transitivePeerDependencies:
-      - debug
-      - supports-color
-
-  '@builderbot/provider-meta@1.3.2-y.0':
+  '@builderbot/provider-meta@1.3.4':
     dependencies:
       axios: 1.12.2
       body-parser: 1.20.3
@@ -3423,7 +3404,7 @@ snapshots:
   '@langchain/community@0.0.43(googleapis@164.1.0)(lodash@4.17.21)(openai@6.6.0(zod@4.1.12))(vectordb@0.4.20(@apache-arrow/ts@14.0.2)(apache-arrow@14.0.2))':
     dependencies:
       '@langchain/core': 0.1.63(openai@6.6.0(zod@4.1.12))
-      '@langchain/openai': 0.0.34
+      '@langchain/openai': 0.0.25
       expr-eval: 2.0.2
       flat: 5.0.2
       langsmith: 0.1.68(openai@6.6.0(zod@4.1.12))
@@ -3489,22 +3470,6 @@ snapshots:
     transitivePeerDependencies:
       - openai
 
-  '@langchain/core@0.2.36(openai@4.104.0(zod@3.25.76))':
-    dependencies:
-      ansi-styles: 5.2.0
-      camelcase: 6.3.0
-      decamelize: 1.2.0
-      js-tiktoken: 1.0.21
-      langsmith: 0.1.68(openai@4.104.0(zod@3.25.76))
-      mustache: 4.2.0
-      p-queue: 6.6.2
-      p-retry: 4.6.2
-      uuid: 10.0.0
-      zod: 3.25.76
-      zod-to-json-schema: 3.24.6(zod@3.25.76)
-    transitivePeerDependencies:
-      - openai
-
   '@langchain/core@0.2.36(openai@6.6.0(zod@4.1.12))':
     dependencies:
       ansi-styles: 5.2.0
@@ -3560,7 +3525,7 @@ snapshots:
 
   '@langchain/openai@0.0.34':
     dependencies:
-      '@langchain/core': 0.2.36(openai@4.104.0(zod@3.25.76))
+      '@langchain/core': 0.1.63(openai@4.104.0(zod@3.25.76))
       js-tiktoken: 1.0.21
       openai: 4.104.0(zod@3.25.76)
       zod: 3.25.76

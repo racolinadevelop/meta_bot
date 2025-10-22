@@ -1,4 +1,3 @@
-// const spreadSheetId = '1Tqhr0K-kLjZm5K8L6u-M9wz4cdJRdR3x8DPM9vZU_6E'
 import { google } from "googleapis";
 import { sheets_v4 } from "googleapis";
 import "dotenv/config";
