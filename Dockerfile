@@ -1,5 +1,5 @@
 # Image size ~ 400MB
-FROM node:20-bullseye as builder
+FROM node:22-bookworm as builder
 
 WORKDIR /app
 
@@ -18,7 +18,7 @@ RUN apk add --no-cache --virtual .gyp \
     && pnpm install && pnpm run build \
     && apk del .gyp
 
-FROM node:20-bullseye as deploy
+FROM node:22-bookworm as deploy
 
 WORKDIR /app
 
