@@ -6,11 +6,7 @@ import { menuFlow } from "./menuFlow";
 import { faqFlow } from "./faqFlow";
 import "dotenv/config";
 
-const Prompt_DETECTED = path.join(
-    process.cwd(),
-    "assets/prompts",
-    "prompt_detection.txt"
-);
+const Prompt_DETECTED = path.join(process.cwd(), "assets", "prompts", "prompt_detection.txt");
 
 const promptDetected = fs.readFileSync(Prompt_DETECTED, "utf8");
 
