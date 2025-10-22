@@ -5,7 +5,7 @@ import chatGPT from "~/services/chatGPT";
 import spreadSheets from "~/services/spreadSheets";
 import "dotenv/config";
 
-const pathPrompt = path.join(process.cwd(), "assets", "prompts", "prompt_ChatGPT.txt");
+const pathPrompt = path.join(process.cwd(), "assets", "prompts", "prompt_chatGPT.txt");
 const prompt = fs.readFileSync(pathPrompt, "utf-8");
 
 export const faqFlow = addKeyword(EVENTS.ACTION)
